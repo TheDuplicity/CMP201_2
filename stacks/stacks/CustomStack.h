@@ -8,6 +8,9 @@ public:
 	/** Return true if the stack is empty, false otherwise. */
 	bool empty()
 	{
+		if (stackSize == 0) {
+			return true;
+		}
 		return false; // FIXME implement this properly
 	}
 
@@ -34,6 +37,8 @@ public:
 	{
 		return 42; // FIXME implement this properly
 	}
+	int stackItems[40]{0};
+	int stackSize;
 };
 
 #endif
