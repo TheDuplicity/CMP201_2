@@ -1,0 +1,6 @@
+﻿  main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 6 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  stacks.vcxproj -> C:\Visual Studio Projects\Year2\CMP201\CMP201_2\stacks\x64\Release\stacks.exe

@@ -2,43 +2,51 @@
 #define CUSTOMSTACK_H
 
 /** A stack of integers. */
-class CustomStack
+template <typename T> class CustomStack
 {
 public:
 	/** Return true if the stack is empty, false otherwise. */
 	bool empty()
 	{
-		if (stackSize == 0) {
+		if (stackTop == -1) {
 			return true;
 		}
 		return false; // FIXME implement this properly
 	}
 
 	/** Add an item to the top of the stack. */
-	void push(int value)
+	void push(T value)
 	{
 		// FIXME implement this properly
+		if (stackTop <= (int)(sizeof(stackItems)/sizeof(stackItems[0]))) {
+
+			stackTop++;
+			stackItems[stackTop] = value;
+		}
 	}
 
 	/** Remove the item at the top of the stack. */
 	void pop()
 	{
 		// FIXME implement this properly
+		if (stackTop > -1) {
+			stackTop--;
+		}
 	}
 
 	/** Return the item at the top of the stack. */
-	int top()
+	T& top()
 	{
-		return 42; // FIXME implement this properly
+		return stackItems[stackTop]; // FIXME implement this properly
 	}
 
 	/** Return the number of items on the stack. */
 	int size()
 	{
-		return 42; // FIXME implement this properly
+		return stackTop + 1; // FIXME implement this properly
 	}
-	int stackItems[40]{0};
-	int stackSize;
+	T stackItems[40];
+	int stackTop = -1;
 };
 
 #endif

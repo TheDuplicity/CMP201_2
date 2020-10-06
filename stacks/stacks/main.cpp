@@ -16,7 +16,8 @@ using std::stack;
 void testStack()
 {
 	// FIXME Put stuff here
-	CustomStack myStack;
+	CustomStack<int> myStack;
+	/*
 	myStack.push(5);
 	myStack.push(2);
 	for (int i = 0; i < 2; i++)
@@ -24,6 +25,7 @@ void testStack()
 		cout << myStack.top();
 		myStack.pop();
 	}
+	*/
 	//check push and top
 	assert(myStack.empty());
 	myStack.push(2);
@@ -39,6 +41,9 @@ void testStack()
 	myStack.pop();
 	assert(myStack.top() == 10);
 	assert(myStack.size() == 1);
+	myStack.pop();
+	myStack.pop();
+	assert(myStack.empty());
 
 
 }
